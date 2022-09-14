@@ -1,0 +1,3 @@
+[submodule "Bhush Engine/vendor/spdlog"]
+	path = Bhush Engine/vendor/spdlog
+	url = https://github.com/gabime/spdlog

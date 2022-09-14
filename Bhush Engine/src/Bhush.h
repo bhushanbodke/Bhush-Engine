@@ -2,6 +2,7 @@
 /*For application use only*/
 #include"Bhush\Application.h"
 #include"Bhush\Core.h"
+#include"Bhush/Log.h"
 #include<stdio.h>
 
 /* ---------Entry Point ---------------- */
