@@ -1,4 +1,6 @@
+#include <iostream>
 #include "Application.h"
+#include "event/ApplicationEvents.h"
 
 namespace bhush {
 
@@ -9,6 +11,8 @@ namespace bhush {
 
 	}
 	void Application::Run() {
+		WindowResizeEvent e(100, 250);
+		std::cout << e.GetName() << std::endl;
 		while (true);
 	}
 }

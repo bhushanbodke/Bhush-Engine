@@ -1,3 +1,4 @@
+
 #include<iostream>
 #include<Bhush.h>
 
@@ -11,6 +12,6 @@ public:
 	}
 };
 
-bhush::Application* bhush::createApplication() {
+bhush::Application*  bhush::createApplication() {
 	return new Sandbox();
 }

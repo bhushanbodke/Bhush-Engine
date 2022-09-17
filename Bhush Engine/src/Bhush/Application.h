@@ -12,6 +12,5 @@ namespace bhush {
 	};
 	/*to be defined in client*/
 	bhush::Application* createApplication();
-
 }
 

@@ -92,7 +92,7 @@
       <ImportLibrary>..\bin\Debug-windows-x86_64\Bhush Engine\Bhush Engine.lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy "$(targetpath)" "$(SolutionDir)bin\Debug-windows-x86_64\Sandbox "</Command>
+      <Command>xcopy "$(targetpath)"  "$(SolutionDir)bin\Debug-windows-x86_64\Sandbox " /Y</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -117,7 +117,7 @@
       <ImportLibrary>..\bin\Release-windows-x86_64\Bhush Engine\Bhush Engine.lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy "$(targetpath)" "$(SolutionDir)bin\Debug-windows-x86_64\Sandbox "</Command>
+      <Command>xcopy "$(targetpath)"  "$(SolutionDir)bin\Debug-windows-x86_64\Sandbox " /Y</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Dist|x64'">
@@ -142,7 +142,7 @@
       <ImportLibrary>..\bin\Dist-windows-x86_64\Bhush Engine\Bhush Engine.lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy "$(targetpath)" "$(SolutionDir)bin\Debug-windows-x86_64\Sandbox "</Command>
+      <Command>xcopy "$(targetpath)"  "$(SolutionDir)bin\Debug-windows-x86_64\Sandbox " /Y</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -150,11 +150,18 @@
     <ClInclude Include="src\Bhush\Application.h" />
     <ClInclude Include="src\Bhush\Core.h" />
     <ClInclude Include="src\Bhush\Entrypoint.h" />
+    <ClInclude Include="src\Bhush\event\ApplicationEvents.h" />
+    <ClInclude Include="src\Bhush\event\Event.h" />
+    <ClInclude Include="src\Bhush\event\KeyEvent.h" />
+    <ClInclude Include="src\Bhush\event\MouseEvents.h" />
     <ClInclude Include="src\Bhush\Log.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Bhush\Application.cpp" />
     <ClCompile Include="src\Bhush\Log.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cpp.hint" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
